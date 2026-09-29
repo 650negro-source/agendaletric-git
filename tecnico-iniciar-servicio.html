@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar servicio — AgendaLetric</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+
+<input type="checkbox" id="menuToggle" class="menu-toggle-input">
+<div class="app-shell">
+  <label for="menuToggle" class="sidebar-overlay"></label>
+  <aside class="sidebar">
+    <div class="spread">
+      <div class="brand"><span class="brand-mark"><img src="assets/logo-icon.png" alt=""></span><span class="brand-name">Agenda<span>Letric</span></span></div>
+      <label for="menuToggle" class="sidebar-close">✕</label>
+    </div>
+    <div class="sidebar-role">Técnico</div>
+    <nav class="nav-list">
+      <a class="nav-link" href="tecnico-dashboard.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg></span> Dashboard</a>
+      <a class="nav-link" href="tecnico-citas.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="3.5" cy="6" r="1"/><circle cx="3.5" cy="12" r="1"/><circle cx="3.5" cy="18" r="1"/></svg></span> Mis citas asignadas</a>
+      <a class="nav-link is-active" href="tecnico-iniciar-servicio.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5-6-3.5Z" fill="currentColor" stroke="none"/></svg></span> Iniciar servicio</a>
+      <a class="nav-link" href="tecnico-registrar-servicio.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2-2Z"/></svg></span> Registrar servicio</a>
+      <a class="nav-link" href="tecnico-reportes.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M12 20V4M20 20v-7"/></svg></span> Reportes realizados</a>
+    </nav>
+    <div class="sidebar-foot">
+      <a class="btn btn-ghost btn-block" href="index.html" style="color:#C7D2E6; justify-content:flex-start;">⏻ Cerrar sesión</a>
+    </div>
+  </aside>
+
+  <div class="app-main">
+    <header class="topbar">
+      <label for="menuToggle" class="menu-toggle" aria-label="Abrir menú">☰</label>
+      <div class="user-chip">
+        <div class="user-meta"><strong>Jorge Pérez</strong><span>Técnico</span></div>
+        <div class="avatar">JP</div>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page-head">
+        <a href="tecnico-citas.html" class="text-sm">← Volver a mis citas asignadas</a>
+        <h1 style="margin-top:var(--sp-2);">Iniciar servicio</h1>
+        <p>Verifica los datos antes de comenzar a trabajar en esta cita.</p>
+      </div>
+
+      <div class="card" style="max-width:640px;">
+        <div class="spread" style="margin-bottom:var(--sp-4);">
+          <h3 style="margin:0;">Diagnóstico eléctrico</h3>
+          <span class="badge badge-confirmada">Confirmada</span>
+        </div>
+        <div class="stack" style="gap:var(--sp-2); margin-bottom:var(--sp-5);">
+          <div class="spread"><span class="text-muted text-sm">Cliente</span><strong>Carlos Pérez</strong></div>
+          <div class="spread"><span class="text-muted text-sm">Vehículo</span><strong>Toyota Corolla — ABC 123</strong></div>
+          <div class="spread"><span class="text-muted text-sm">Fecha / Hora</span><strong>15 jul 2026 · 9:00 a. m.</strong></div>
+          <div class="spread"><span class="text-muted text-sm">Lugar</span><strong>Taller principal</strong></div>
+          <div><span class="text-muted text-sm">Observaciones del cliente</span><p style="margin:4px 0 0;">Falla en el arranque del carro</p></div>
+        </div>
+
+        <div class="state-banner state-info"><span>ℹ️</span><div>Al iniciar, el estado de la cita pasará a <span class="badge badge-en_proceso">En proceso</span></div></div>
+
+        <div class="cluster">
+          <a class="btn btn-primary" href="tecnico-registrar-servicio.html">Iniciar servicio</a>
+          <a class="btn btn-secondary" href="tecnico-citas.html">Cancelar</a>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>

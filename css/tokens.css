@@ -1,0 +1,79 @@
+/* =========================================================
+   AGENDALETRIC — TOKENS DE DISEÑO
+   Sistema centralizado de variables (paleta, tipografía,
+   espaciado, radios, sombras) — ver blueprint "El Sistema
+   de Diseño: Tokens CSS".
+   ========================================================= */
+
+:root{
+  /* Color — marca "eléctrica": navy profundo + azul de acción + verde carga */
+  --ink-900:#0B1220;
+  --ink-700:#1E293B;
+  --ink-500:#4B5768;
+  --ink-300:#8B96A5;
+  --ink-100:#E3E8EF;
+
+  --bg:#F5F7FB;
+  --surface:#FFFFFF;
+  --border:#E1E6EF;
+
+  --primary-700:#0B3B8C;
+  --primary-600:#175CD3;
+  --primary-500:#2E75E6;
+  --primary-100:#E4EEFF;
+
+  --accent-600:#0E9F5A;
+  --accent-500:#17B26A;
+  --accent-100:#DFF6EA;
+
+  --warning-600:#B54708;
+  --warning-500:#F79009;
+  --warning-100:#FFF1DB;
+
+  --danger-600:#B42318;
+  --danger-500:#D92D20;
+  --danger-100:#FDE4E2;
+
+  /* Tipografía */
+  --font-display:"Space Grotesk", "Segoe UI", sans-serif;
+  --font-body:"Inter", "Segoe UI", sans-serif;
+
+  --fs-xs:.75rem;
+  --fs-sm:.875rem;
+  --fs-base:1rem;
+  --fs-md:1.125rem;
+  --fs-lg:1.375rem;
+  --fs-xl:1.75rem;
+  --fs-2xl:2.25rem;
+
+  /* Espaciado (escala de 4px) */
+  --sp-1:.25rem;
+  --sp-2:.5rem;
+  --sp-3:.75rem;
+  --sp-4:1rem;
+  --sp-5:1.5rem;
+  --sp-6:2rem;
+  --sp-7:3rem;
+  --sp-8:4rem;
+
+  /* Radios y sombras */
+  --radius-sm:8px;
+  --radius-md:14px;
+  --radius-lg:20px;
+  --shadow-sm:0 1px 2px rgba(11,18,32,.06);
+  --shadow-md:0 8px 24px rgba(11,18,32,.08);
+  --shadow-lg:0 16px 40px rgba(11,18,32,.14);
+
+  /* Layout */
+  --sidebar-w:248px;
+  --header-h:64px;
+  --container-max:1180px;
+
+  /* Movimiento */
+  --ease:cubic-bezier(.4,0,.2,1);
+  --dur:160ms;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration:.001ms !important; transition-duration:.001ms !important; }
+}

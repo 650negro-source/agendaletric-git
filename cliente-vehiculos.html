@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis vehículos — AgendaLetric</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+
+<input type="checkbox" id="menuToggle" class="menu-toggle-input">
+<div class="app-shell">
+  <label for="menuToggle" class="sidebar-overlay"></label>
+  <aside class="sidebar">
+    <div class="spread">
+      <div class="brand"><span class="brand-mark"><img src="assets/logo-icon.png" alt=""></span><span class="brand-name">Agenda<span>Letric</span></span></div>
+      <label for="menuToggle" class="sidebar-close">✕</label>
+    </div>
+    <div class="sidebar-role">Cliente</div>
+    <nav class="nav-list">
+      <a class="nav-link" href="cliente-dashboard.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg></span> Dashboard</a>
+      <a class="nav-link is-active" href="cliente-vehiculos.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16V11l2-5h12l2 5v5"/><path d="M2 16h20"/><circle cx="7" cy="18.5" r="1.6"/><circle cx="17" cy="18.5" r="1.6"/></svg></span> Mis vehículos</a>
+      <a class="nav-link" href="cliente-registrar-vehiculo.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16V11l2-5h12l2 5v5"/><path d="M2 16h20"/><circle cx="7" cy="18.5" r="1.6"/><circle cx="17" cy="18.5" r="1.6"/><path d="M15 4v4M13 6h4"/></svg></span> Registrar vehículo</a>
+      <a class="nav-link" href="cliente-agendar.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span> Agendar cita</a>
+      <a class="nav-link" href="cliente-mis-citas.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="3.5" cy="6" r="1"/><circle cx="3.5" cy="12" r="1"/><circle cx="3.5" cy="18" r="1"/></svg></span> Mis citas</a>
+      <a class="nav-link" href="cliente-recordatorios.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6Z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></span> Recordatorios</a>
+      <a class="nav-link" href="cliente-notificaciones.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8 9h8M8 12.5h5"/></svg></span> Notificaciones</a>
+    </nav>
+    <div class="sidebar-foot">
+      <a class="btn btn-ghost btn-block" href="index.html" style="color:#C7D2E6; justify-content:flex-start;">⏻ Cerrar sesión</a>
+    </div>
+  </aside>
+
+  <div class="app-main">
+    <header class="topbar">
+      <label for="menuToggle" class="menu-toggle" aria-label="Abrir menú">☰</label>
+      <div class="user-chip">
+        <div class="user-meta"><strong>Carlos Pérez</strong><span>Cliente</span></div>
+        <div class="avatar">CP</div>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page-head spread">
+        <div>
+          <h1>Mis vehículos</h1>
+          <p>Estos son los vehículos que tienes registrados en tu cuenta.</p>
+        </div>
+        <a class="btn btn-primary" href="cliente-registrar-vehiculo.html">+ Registrar vehículo</a>
+      </div>
+
+      <div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+
+      <section class="card" aria-labelledby="titulo-listado">
+        <div class="spread" style="margin-bottom:var(--sp-4);">
+          <div>
+            <h2 id="titulo-listado">Vehículos registrados</h2>
+            <p class="text-sm text-muted">La información se consulta y actualiza desde el almacenamiento del navegador.</p>
+          </div>
+        </div>
+
+        <div class="form-row" style="margin-bottom:var(--sp-4);">
+          <div class="field">
+            <label for="vehicleSearch">Buscar vehículo</label>
+            <input class="input" id="vehicleSearch" type="search" placeholder="Dueño, marca, modelo, placa, correo..." autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="vehicleTypeFilter">Filtrar por tipo</label>
+            <select class="input" id="vehicleTypeFilter">
+              <option value="">Todos los tipos</option>
+              <option value="Gasolina">Gasolina</option>
+              <option value="Diésel">Diésel</option>
+              <option value="Eléctrico">Eléctrico</option>
+              <option value="Híbrido">Híbrido</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="vehicleStatusFilter">Filtrar por estado</label>
+            <select class="input" id="vehicleStatusFilter">
+              <option value="">Todos los estados</option>
+              <option value="Activo">Activo</option>
+              <option value="Inactivo">Inactivo</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-wrap" id="vehiclesTableWrap">
+          <table class="data-table">
+            <caption class="text-sm text-muted" style="caption-side:bottom; padding:1rem; text-align:left;">Los registros se generan dinámicamente desde LocalStorage.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Vehículo</th>
+                <th scope="col">Dueño</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Celular</th>
+                <th scope="col">Placa</th>
+                <th scope="col">Año</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="vehiclesTableBody"></tbody>
+          </table>
+        </div>
+
+        <div class="empty-state" id="emptyState" hidden>
+          <div>
+            <div class="avatar" style="margin:0 auto 1rem;">0</div>
+            <h3>No hay vehículos registrados</h3>
+            <p class="text-sm text-muted">Registra un vehículo para verlo en este listado.</p>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <span id="resultsSummary">Mostrando 0 vehículos</span>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<script src="assets/js/storage.js" defer></script>
+<script src="assets/js/vehicles.js" defer></script>
+</body>
+</html>

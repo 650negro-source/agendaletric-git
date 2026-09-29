@@ -1,0 +1,59 @@
+/* =========================================================
+   BASE — reset, tipografía, elementos semánticos
+   ========================================================= */
+
+*, *::before, *::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+body{
+  margin:0;
+  font-family:var(--font-body);
+  font-size:var(--fs-base);
+  line-height:1.55;
+  color:var(--ink-900);
+  background:var(--bg);
+}
+img, svg{ display:block; max-width:100%; }
+button, input, select, textarea{ font:inherit; color:inherit; }
+a{ color:var(--primary-600); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+ul{ list-style:none; margin:0; padding:0; }
+
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+  font-weight:600;
+  line-height:1.2;
+  margin:0 0 var(--sp-2);
+  color:var(--ink-900);
+}
+h1{ font-size:var(--fs-2xl); }
+h2{ font-size:var(--fs-xl); }
+h3{ font-size:var(--fs-lg); }
+p{ margin:0 0 var(--sp-3); color:var(--ink-500); }
+
+small, .text-sm{ font-size:var(--fs-sm); }
+.text-muted{ color:var(--ink-500); }
+
+/* Foco visible accesible en todo elemento interactivo */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible{
+  outline:2px solid var(--primary-600);
+  outline-offset:2px;
+  border-radius:4px;
+}
+
+.sr-only{
+  position:absolute; width:1px; height:1px;
+  padding:0; margin:-1px; overflow:hidden;
+  clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
+
+.container{
+  width:100%;
+  max-width:var(--container-max);
+  margin-inline:auto;
+  padding-inline:var(--sp-5);
+}

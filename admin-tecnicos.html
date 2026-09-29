@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Técnicos — AgendaLetric</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+
+<input type="checkbox" id="menuToggle" class="menu-toggle-input">
+<div class="app-shell">
+  <label for="menuToggle" class="sidebar-overlay"></label>
+  <aside class="sidebar">
+    <div class="spread">
+      <div class="brand"><span class="brand-mark"><img src="assets/logo-icon.png" alt=""></span><span class="brand-name">Agenda<span>Letric</span></span></div>
+      <label for="menuToggle" class="sidebar-close">✕</label>
+    </div>
+    <div class="sidebar-role">Administrador</div>
+    <nav class="nav-list">
+      <a class="nav-link" href="admin-dashboard.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg></span> Dashboard</a>
+      <a class="nav-link" href="admin-clientes.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M15.5 14.2c2.6.4 4.5 2.6 4.5 5.3"/></svg></span> Clientes</a>
+      <a class="nav-link is-active" href="admin-tecnicos.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 7 21l5-2.5L17 21l-2-7.5"/></svg></span> Técnicos</a>
+      <a class="nav-link" href="admin-especialidades.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h18"/><circle cx="7" cy="7" r="1.2" fill="currentColor" stroke="none"/><circle cx="14" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="10" cy="17" r="1.2" fill="currentColor" stroke="none"/></svg></span> Especialidades</a>
+      <a class="nav-link" href="admin-horarios.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span> Horarios</a>
+      <a class="nav-link" href="admin-servicios.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 11h6M9 15h6"/></svg></span> Servicios</a>
+      <a class="nav-link" href="admin-citas.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span> Administrar citas</a>
+      <a class="nav-link" href="admin-vehiculos.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16V11l2-5h12l2 5v5"/><path d="M2 16h20"/><circle cx="7" cy="18.5" r="1.6"/><circle cx="17" cy="18.5" r="1.6"/></svg></span> Vehículos registrados</a>
+      <a class="nav-link" href="admin-reportes.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M12 20V4M20 20v-7"/></svg></span> Reportes</a>
+      <a class="nav-link" href="admin-notificaciones.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8 9h8M8 12.5h5"/></svg></span> Notificaciones</a>
+    </nav>
+    <div class="sidebar-foot">
+      <a class="btn btn-ghost btn-block" href="index.html" style="color:#C7D2E6; justify-content:flex-start;">⏻ Cerrar sesión</a>
+    </div>
+  </aside>
+
+  <div class="app-main">
+    <header class="topbar">
+      <label for="menuToggle" class="menu-toggle" aria-label="Abrir menú">☰</label>
+      <div class="user-chip">
+        <div class="user-meta"><strong>Laura Gómez</strong><span>Administrador</span></div>
+        <div class="avatar">LG</div>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page-head">
+        <h1>Técnicos</h1>
+        <p>Gestiona el equipo técnico del taller y su especialidad principal.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-title-row"><h3>Equipo técnico</h3></div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Nombre</th><th>Especialidad</th><th>Citas asignadas</th></tr></thead>
+            <tbody>
+              <tr><td>Jorge Pérez</td><td>Electricidad automotriz</td><td>3</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title-row"><h3>Nuevo técnico</h3></div>
+          <!-- Sin backend: al guardar, vuelve a este mismo listado -->
+          <form action="admin-tecnicos.html" method="get">
+            <div class="field">
+              <label for="nombre">Nombre completo</label>
+              <input class="input" id="nombre" name="nombre" placeholder="Ingresa datos" required>
+            </div>
+            <div class="field">
+              <label for="correo">Correo electrónico</label>
+              <input class="input" type="email" id="correo" name="correo" placeholder="Ingresa datos" required>
+            </div>
+            <div class="field">
+              <label for="especialidad">Especialidad</label>
+              <select class="input" id="especialidad" name="especialidad" required>
+                <option value="">Selecciona</option>
+                <option>Electricidad automotriz</option>
+                <option>Diagnóstico electrónico</option>
+                <option>Frenos y suspensión</option>
+                <option>Baterías de alto voltaje</option>
+              </select>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">Guardar técnico</button>
+          </form>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>

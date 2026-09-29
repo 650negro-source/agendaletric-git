@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar sesión — AgendaLetric</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+
+<div class="auth-shell">
+  <section class="auth-visual">
+    <div class="brand"><span class="brand-mark"><img src="assets/logo-icon.png" alt=""></span><span class="brand-name">AgendaLetric</span></div>
+    <div>
+      <h1>Inicio de sesión</h1>
+      <p>Ingresa tus credenciales para ver tus citas, vehículos y recordatorios.</p>
+    </div>
+    <p class="auth-quote">Reglas claras, navegación lógica y validación real: así se construye una buena interfaz.</p>
+  </section>
+
+  <section class="auth-form-side">
+    <!-- Sin backend: el formulario navega al dashboard de cliente al enviarse correctamente -->
+    <form class="auth-card" action="cliente-dashboard.html" method="get">
+      <div class="brand"><span class="brand-mark"><img src="assets/logo-icon.png" alt=""></span><span class="brand-name">Agenda<span>Letric</span></span></div>
+
+      <h1>Iniciar sesión</h1>
+      <p>¿No tienes cuenta? <a href="registro.html">Crear cuenta</a></p>
+
+      <div class="field">
+        <label for="email">Correo electrónico</label>
+        <input class="input" type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="username" required>
+        <p class="error-msg">Ingresa un correo válido.</p>
+      </div>
+
+      <div class="field">
+        <label for="password">Contraseña</label>
+        <input class="input" type="password" id="password" name="password" placeholder="••••••••" autocomplete="current-password" required minlength="4">
+        <p class="error-msg">Ingresa tu contraseña (mínimo 4 caracteres).</p>
+      </div>
+
+      <div class="spread" style="margin-bottom:var(--sp-5);">
+        <label class="checkbox-row"><input type="checkbox" id="remember"> Recordar mi sesión</label>
+        <a href="recuperar.html" class="text-sm">¿Olvidaste tu contraseña?</a>
+      </div>
+
+      <button class="btn btn-primary btn-block" type="submit">Iniciar sesión</button>
+
+      <p class="auth-foot">
+        Prototipo: cualquier correo y contraseña válidos te llevarán al panel de <strong>cliente</strong>.<br>
+        Para ver los otros roles, entra directo por
+        <a href="tecnico-dashboard.html">Dashboard técnico</a> o
+        <a href="admin-dashboard.html">Dashboard administrador</a>.
+      </p>
+    </form>
+  </section>
+</div>
+
+</body>
+</html>

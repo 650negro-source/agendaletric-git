@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registrar vehículo — AgendaLetric</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+
+<input type="checkbox" id="menuToggle" class="menu-toggle-input">
+<div class="app-shell">
+  <label for="menuToggle" class="sidebar-overlay"></label>
+  <aside class="sidebar">
+    <div class="spread">
+      <div class="brand"><span class="brand-mark"><img src="assets/logo-icon.png" alt=""></span><span class="brand-name">Agenda<span>Letric</span></span></div>
+      <label for="menuToggle" class="sidebar-close">✕</label>
+    </div>
+    <div class="sidebar-role">Cliente</div>
+    <nav class="nav-list">
+      <a class="nav-link" href="cliente-dashboard.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg></span> Dashboard</a>
+      <a class="nav-link" href="cliente-vehiculos.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16V11l2-5h12l2 5v5"/><path d="M2 16h20"/><circle cx="7" cy="18.5" r="1.6"/><circle cx="17" cy="18.5" r="1.6"/></svg></span> Mis vehículos</a>
+      <a class="nav-link is-active" href="cliente-registrar-vehiculo.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16V11l2-5h12l2 5v5"/><path d="M2 16h20"/><circle cx="7" cy="18.5" r="1.6"/><circle cx="17" cy="18.5" r="1.6"/><path d="M15 4v4M13 6h4"/></svg></span> Registrar vehículo</a>
+      <a class="nav-link" href="cliente-agendar.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span> Agendar cita</a>
+      <a class="nav-link" href="cliente-mis-citas.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="3.5" cy="6" r="1"/><circle cx="3.5" cy="12" r="1"/><circle cx="3.5" cy="18" r="1"/></svg></span> Mis citas</a>
+      <a class="nav-link" href="cliente-recordatorios.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6Z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></span> Recordatorios</a>
+      <a class="nav-link" href="cliente-notificaciones.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8 9h8M8 12.5h5"/></svg></span> Notificaciones</a>
+    </nav>
+    <div class="sidebar-foot">
+      <a class="btn btn-ghost btn-block" href="index.html" style="color:#C7D2E6; justify-content:flex-start;">⏻ Cerrar sesión</a>
+    </div>
+  </aside>
+
+  <div class="app-main">
+    <header class="topbar">
+      <label for="menuToggle" class="menu-toggle" aria-label="Abrir menú">☰</label>
+      <div class="user-chip">
+        <div class="user-meta"><strong>Carlos Pérez</strong><span>Cliente</span></div>
+        <div class="avatar">CP</div>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page-head">
+        <a href="cliente-vehiculos.html" class="text-sm">← Volver a mis vehículos</a>
+        <h1 id="formPageTitle" style="margin-top:var(--sp-2);">Registrar vehículo</h1>
+        <p>Registra un vehículo para poder agendar citas de servicio.</p>
+      </div>
+
+      <div id="formFeedback" class="feedback" role="alert" tabindex="-1" hidden></div>
+
+      <div class="card" style="max-width:520px;">
+        <form id="formVehiculo" novalidate>
+          <div class="field">
+            <label for="nombreCompleto">Nombre completo del dueño</label>
+            <input class="input" id="nombreCompleto" name="nombreCompleto" type="text" minlength="5" maxlength="60" autocomplete="name" placeholder="Ej. Carlos Pérez" required>
+            <p class="error-msg">Escribe el nombre completo usando letras y espacios. No se permiten números ni texto sin estructura válida.</p>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="correo">Correo electrónico</label>
+              <input class="input" id="correo" name="correo" type="email" maxlength="100" autocomplete="email" placeholder="Ej. carlos@correo.com" required>
+              <p class="error-msg">Ingresa un correo electrónico válido.</p>
+            </div>
+            <div class="field">
+              <label for="telefono">Celular</label>
+              <input class="input" id="telefono" name="telefono" type="tel" inputmode="numeric" minlength="10" maxlength="10" autocomplete="tel" placeholder="Ej. 3001234567" required>
+              <p class="error-msg">Debe tener 10 números y comenzar por 3.</p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="marca">Marca</label>
+            <input class="input" id="marca" name="marca" type="text" minlength="2" maxlength="30" autocomplete="off" placeholder="Ej. Toyota" required>
+            <p class="error-msg">La marca debe contener letras y no permite números ni texto sin estructura válida.</p>
+          </div>
+
+          <div class="field">
+            <label for="modelo">Modelo</label>
+            <input class="input" id="modelo" name="modelo" type="text" minlength="1" maxlength="30" autocomplete="off" placeholder="Ej. Corolla" required>
+            <p class="error-msg">El modelo debe comenzar con una letra. Se permiten letras, números, espacios y guiones.</p>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="placa">Placa</label>
+              <input class="input" id="placa" name="placa" type="text" minlength="6" maxlength="6" inputmode="text" autocomplete="off" placeholder="Ej. ABC123" required>
+              <p class="error-msg">La placa debe tener 3 letras y 3 números. Ej. ABC123.</p>
+            </div>
+            <div class="field">
+              <label for="anio">Año</label>
+              <input class="input" id="anio" name="anio" type="text" inputmode="numeric" minlength="4" maxlength="4" placeholder="Ej. 2023" required>
+              <p class="error-msg">El año debe contener 4 números válidos.</p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="tipo">Tipo de vehículo</label>
+            <select class="input" id="tipo" name="tipo" required>
+              <option value="">Selecciona</option>
+              <option value="Gasolina">Gasolina</option>
+              <option value="Diésel">Diésel</option>
+              <option value="Eléctrico">Eléctrico</option>
+              <option value="Híbrido">Híbrido</option>
+            </select>
+            <p class="error-msg">Selecciona Gasolina, Diésel, Eléctrico o Híbrido.</p>
+          </div>
+
+          <div class="cluster" style="justify-content:flex-end;">
+            <a class="btn btn-secondary" href="cliente-vehiculos.html">Cancelar</a>
+            <button class="btn btn-primary" id="submitButton" type="submit">Guardar vehículo</button>
+          </div>
+        </form>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="assets/js/storage.js" defer></script>
+<script src="assets/js/new-vehicle.js" defer></script>
+</body>
+</html>

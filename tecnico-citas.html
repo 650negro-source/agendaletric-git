@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis citas asignadas — AgendaLetric</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+
+<input type="checkbox" id="menuToggle" class="menu-toggle-input">
+<div class="app-shell">
+  <label for="menuToggle" class="sidebar-overlay"></label>
+  <aside class="sidebar">
+    <div class="spread">
+      <div class="brand"><span class="brand-mark"><img src="assets/logo-icon.png" alt=""></span><span class="brand-name">Agenda<span>Letric</span></span></div>
+      <label for="menuToggle" class="sidebar-close">✕</label>
+    </div>
+    <div class="sidebar-role">Técnico</div>
+    <nav class="nav-list">
+      <a class="nav-link" href="tecnico-dashboard.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg></span> Dashboard</a>
+      <a class="nav-link is-active" href="tecnico-citas.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="3.5" cy="6" r="1"/><circle cx="3.5" cy="12" r="1"/><circle cx="3.5" cy="18" r="1"/></svg></span> Mis citas asignadas</a>
+      <a class="nav-link" href="tecnico-iniciar-servicio.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5-6-3.5Z" fill="currentColor" stroke="none"/></svg></span> Iniciar servicio</a>
+      <a class="nav-link" href="tecnico-registrar-servicio.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2-2Z"/></svg></span> Registrar servicio</a>
+      <a class="nav-link" href="tecnico-reportes.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M12 20V4M20 20v-7"/></svg></span> Reportes realizados</a>
+    </nav>
+    <div class="sidebar-foot">
+      <a class="btn btn-ghost btn-block" href="index.html" style="color:#C7D2E6; justify-content:flex-start;">⏻ Cerrar sesión</a>
+    </div>
+  </aside>
+
+  <div class="app-main">
+    <header class="topbar">
+      <label for="menuToggle" class="menu-toggle" aria-label="Abrir menú">☰</label>
+      <div class="user-chip">
+        <div class="user-meta"><strong>Jorge Pérez</strong><span>Técnico</span></div>
+        <div class="avatar">JP</div>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page-head">
+        <h1>Mis citas asignadas</h1>
+        <p>Estas son las citas de servicio que tienes a tu cargo.</p>
+      </div>
+
+      <div class="card">
+        <div class="table-wrap"><table>
+          <thead><tr><th>Cliente</th><th>Vehículo</th><th>Servicio</th><th>Fecha</th><th>Estado</th><th></th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Carlos Pérez</td><td>Toyota Corolla · ABC 123</td><td>Diagnóstico eléctrico</td><td>15 jul 2026</td>
+              <td><span class="badge badge-confirmada">Confirmada</span></td>
+              <td><a class="btn btn-sm btn-primary" href="tecnico-iniciar-servicio.html">Iniciar servicio</a></td>
+            </tr>
+            <tr>
+              <td>Carlos Pérez</td><td>Mazda 3 · XYZ 456</td><td>Mantenimiento preventivo</td><td>22 jul 2026</td>
+              <td><span class="badge badge-pendiente">Pendiente</span></td>
+              <td><span class="text-sm text-muted">Esperando confirmación del cliente</span></td>
+            </tr>
+            <tr>
+              <td>Carlos Pérez</td><td>Toyota Corolla · ABC 123</td><td>Revisión de batería</td><td>02 jun 2026</td>
+              <td><span class="badge badge-finalizada">Finalizada</span></td>
+              <td><a class="btn btn-sm btn-secondary" href="tecnico-reportes.html">Ver reporte</a></td>
+            </tr>
+          </tbody>
+        </table></div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>

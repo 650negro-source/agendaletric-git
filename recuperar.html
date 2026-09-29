@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recuperar contraseña — AgendaLetric</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+
+<div class="auth-shell">
+  <section class="auth-visual">
+    <div class="brand"><span class="brand-mark"><img src="assets/logo-icon.png" alt=""></span><span class="brand-name">AgendaLetric</span></div>
+    <div>
+      <h1>Recuperar contraseña</h1>
+      <p>Te enviaremos un enlace para que puedas crear una nueva contraseña.</p>
+    </div>
+    <p class="auth-quote">La interfaz debe informar siempre qué está ocurriendo.</p>
+  </section>
+
+  <section class="auth-form-side">
+    <div class="auth-card">
+      <div class="brand"><span class="brand-mark"><img src="assets/logo-icon.png" alt=""></span><span class="brand-name">Agenda<span>Letric</span></span></div>
+
+      <h1>Recuperar contraseña</h1>
+      <p>Ingresa el correo con el que te registraste para enviarte un enlace de recuperación.</p>
+
+      <!-- Sin backend: navega a la pantalla de confirmación -->
+      <form action="recuperar-enviado.html" method="get">
+        <div class="field">
+          <label for="email">Correo electrónico</label>
+          <input class="input" type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+          <p class="error-msg">Ingresa un correo válido.</p>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Enviar enlace</button>
+      </form>
+
+      <p class="auth-foot"><a href="login.html">← Volver a iniciar sesión</a></p>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>
