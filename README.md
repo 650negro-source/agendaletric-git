@@ -1,7 +1,7 @@
 # AgendaLetric — Prototipo (solo HTML + CSS)
 
 Prototipo navegable del sistema de agendamiento de mantenimiento para
-vehículos eléctricos e híbridos **AgendaLetric**. Construido 100% con
+vehículos eléctricos, a gasolina, dièsel e híbridos **AgendaLetric**. Construido 100% con
 HTML y CSS — **sin una sola línea de JavaScript** — pensado para
 mostrar el flujo completo de los 3 roles del sistema: Cliente, Técnico
 y Administrador.
